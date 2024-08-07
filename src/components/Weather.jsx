@@ -60,25 +60,25 @@ const Weather = ({ city }) => {
           <h3 className="pb-2">
             {weather.name}, {weather.sys?.country}
           </h3>
-          <h6 className="text-body-secondary pb-2">
+          <h5 className="text-body-secondary pb-2">
             {weather.weather?.[0]?.description}
-          </h6>
+          </h5>
           <img
             className="pb-2"
             src={`https://openweathermap.org/img/wn/${weather.weather?.[0]?.icon}@2x.png`}
             alt=""
           />
-          <h6 className="pb-2">
+          <h5 className="pb-2">
             <strong>
               Temperature: {(weather.main?.temp - 273.15).toFixed()}°C
             </strong>
-          </h6>
-          <h6 className="pb-2">
+          </h5>
+          <h5 className="pb-2">
             <strong>Humidity: {weather.main?.humidity}%</strong>
-          </h6>
-          <h6 className="pb-2">
+          </h5>
+          <h5 className="pb-2">
             <strong>Wind Speed: {weather.wind?.speed} m/s</strong>
-          </h6>
+          </h5>
         </div>
       )}
     </div>
